@@ -6,13 +6,12 @@
         <div> 
             <h1>This is a Blog... I guess...</h1>
         </div>
-
+        {% for post in posts %}
         <div>
-            <h2>Basically just learning <em>Django</em> for a portoflio...</h2>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
-
-        <div>
-            <p>Sure hope I find out how to add all the functionality without <strong>JS</strong></p>
-        </div>
+    {% endfor %}
     </body>
 </html>
